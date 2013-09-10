@@ -38,13 +38,13 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
                       <td>${fieldValue(bean: smsSendInstance, field: "title")}</td>
 
-						<td>${fieldValue(bean: smsSendInstance, field: "receiverphone")}</td>
+                     <td>${fieldValue(bean: smsSendInstance, field: "messageBody")}</td>
+
+                     <td>${fieldValue(bean: smsSendInstance, field: "receiverphone")}</td>
 
                      <td><g:link action="show" id="${smsSendInstance.id}">${fieldValue(bean: smsSendInstance, field: "createtime")}</g:link></td>
 
                      <td>${fieldValue(bean: smsSendInstance, field: "status")}</td>
-
-                     <td>${fieldValue(bean: smsSendInstance, field: "messageBody")}</td>
 					    <td>
                             <g:form>
                                 <fieldset class="buttons">
