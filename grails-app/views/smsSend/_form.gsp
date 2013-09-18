@@ -34,7 +34,7 @@
         <g:message code="smsSend.messageBody.label" default="Message Body" />
 
     </label>
-    <g:textField name="messageBody" value="${smsSendInstance?.messageBody}"/>
+    <g:textArea name="messageBody" value="${smsSendInstance?.messageBody}"/>
 </div>
 
 

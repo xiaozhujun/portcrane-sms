@@ -29,6 +29,7 @@
 						<g:sortableColumn property="receiverphone" title="${message(code: 'smsSent.receiverphone.label', default: 'Receiverphone')}" />
 
                       <g:sortableColumn property="createtime" title="${message(code: 'smsSent.createtime.label', default: 'Createtime')}" />
+                     <th>操作</th>
                     </tr>
 				</thead>
 				<tbody>
@@ -42,7 +43,15 @@
 						<td>${fieldValue(bean: smsSentInstance, field: "receiverphone")}</td>
 
                      <td><g:link action="show" id="${smsSentInstance.id}">${fieldValue(bean: smsSentInstance, field: "createtime")}</g:link></td>
-
+                     <td>
+                         <g:form>
+                             <fieldset class="buttons">
+                                 <g:hiddenField name="id" value="${smsSentInstance?.id}" />
+                                 <g:link class="edit" action="edit" id="${smsSentInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                                 <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                             </fieldset>
+                         </g:form>
+                     </td>
 					</tr>
 				</g:each>
 				</tbody>
